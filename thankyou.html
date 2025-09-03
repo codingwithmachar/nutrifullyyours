@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, #bceddb, #fbe2f4, #d7ecff);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 2rem;
+      padding: 3rem;
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      animation: float 4s ease-in-out infinite;
+      position: relative;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      color: #367d79;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: #367d79;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #285754;
+      transform: scale(1.05);
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 1.5rem;
+      color: #f77ea8;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {opacity: 0; transform: translateY(20px) scale(0.5);}
+      20% {opacity: 1;}
+      100% {opacity: 0; transform: translateY(-250px) scale(1.5);}
+    }
+
+    .heart:nth-child(1) {left: 20%; animation-delay: 0s;}
+    .heart:nth-child(2) {left: 40%; animation-delay: 1s;}
+    .heart:nth-child(3) {left: 60%; animation-delay: 2s;}
+    .heart:nth-child(4) {left: 80%; animation-delay: 3s;}
+    .heart:nth-child(5) {left: 50%; animation-delay: 4s;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="heart">💖</span>
+    <span class="heart">✨</span>
+    <span class="heart">💌</span>
+    <span class="heart">🌸</span>
+    <span class="heart">💖</span>
+
+    <h1>Thank You!</h1>
+    <p>Your consultation request has been received with love.  
+    We can’t wait to be part of your health journey. 🌿</p>
+    <a href="/" class="button">Back to Home</a>
+  </div>
+</body>
+</html>
